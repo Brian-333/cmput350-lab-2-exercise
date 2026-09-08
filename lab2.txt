@@ -1,2 +1,9 @@
 Answer written questions 1 and 2 here.
 
+1. SFML's coordinate system works with (0,0) is at the top-left and y increases as it goes downwards, instead of y is upwards in normal math coordinates.
+The calculation of the angle is in the opposite direction of each other for normal coordinates and SFML coordinates.
+This is surprising because of the inverted y-axis for adding the velocity towards them which requires a negative value if to convert to normal math coordinates. 
+
+2. This design makes the codebase more readable and separates responsibilities.
+This follows the MVC pattern (Model, View, Controller) where the InputSummary is a controller and GameState stores the models and controls the view with draw.
+
